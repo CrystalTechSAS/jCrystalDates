@@ -23,11 +23,6 @@
 hs_err_pid*
 /bin/
 
-# Eclipse
-.classpath
-.project
-.settings/
-
 # Maven
 log/
 target/
