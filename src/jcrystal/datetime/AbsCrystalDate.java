@@ -19,6 +19,10 @@ public abstract class AbsCrystalDate<T extends AbsCrystalDate<?>> {
 		return date;
 	}
 	
+	public long getTime() {
+		return date.getTime();
+	}
+	
 	public abstract T create(long time);
 	public abstract T next();
 	public abstract T prev();
@@ -35,5 +39,9 @@ public abstract class AbsCrystalDate<T extends AbsCrystalDate<?>> {
 	}
 	public static java.util.Date toDate(AbsCrystalDate<?> cDate){
 		return cDate == null ? null : cDate.date;
+	}
+	
+	public static int compare(AbsCrystalDate<?> f1, AbsCrystalDate<?>  f2){
+	    return f1 == null && f2 == null?0: f1 == null? 1: f2 == null?-1 : Long.compare(f1.getTime(), f2.getTime());
 	}
 }
