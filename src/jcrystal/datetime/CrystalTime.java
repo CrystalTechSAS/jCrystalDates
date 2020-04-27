@@ -18,6 +18,12 @@ public class CrystalTime extends AbsCrystalDate<CrystalTime>{
 	public static String format(java.util.Date date){
 		return DateType.TIME.FORMAT.format(date);
 	}
+	@Override public String userFormat(){
+		return DateType.TIME.USER_FORMAT.format(date);
+	}
+	public static String userFormat(java.util.Date date){
+		return DateType.TIME.USER_FORMAT.format(date);
+	}
 	@Override public CrystalTime next(){
 		return add(java.util.GregorianCalendar.MINUTE, 1);
 	}

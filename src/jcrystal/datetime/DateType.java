@@ -19,11 +19,16 @@ public enum DateType {
 	TIME_MILIS("HHmmssSSS", "HH:mm:ss");
 	
 	public final SimpleDateFormat FORMAT;
+	public SimpleDateFormat USER_FORMAT;
 	public final String format;
-	public String userFormat;
 	DateType(String format, String userFormat){
 		FORMAT = new SimpleDateFormat(this.format = format);
 		FORMAT.setTimeZone(CrystalDateUtils.DEFAULT_TIME_ZONE);
-		this.userFormat = userFormat;
+		USER_FORMAT = new SimpleDateFormat(userFormat);
+		USER_FORMAT.setTimeZone(CrystalDateUtils.DEFAULT_TIME_ZONE);
+	}
+	public void setUserFormat(String userFormat) {
+		USER_FORMAT = new SimpleDateFormat(userFormat);
+		USER_FORMAT.setTimeZone(CrystalDateUtils.DEFAULT_TIME_ZONE);
 	}
 }

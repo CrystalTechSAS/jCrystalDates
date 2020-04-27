@@ -27,6 +27,7 @@ public abstract class AbsCrystalDate<T extends AbsCrystalDate<?>> {
 	public abstract T next();
 	public abstract T prev();
 	public abstract String format();
+	public abstract String userFormat();
 	
 	public T add(int field, int value){
 		GregorianCalendar gc = new GregorianCalendar();

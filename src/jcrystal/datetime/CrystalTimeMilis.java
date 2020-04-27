@@ -18,6 +18,12 @@ public class CrystalTimeMilis extends AbsCrystalDate<CrystalTimeMilis>{
 	public static String format(java.util.Date date){
 		return DateType.TIME_MILIS.FORMAT.format(date);
 	}
+	@Override public String userFormat(){
+		return DateType.TIME_MILIS.USER_FORMAT.format(date);
+	}
+	public static String userFormat(java.util.Date date){
+		return DateType.TIME_MILIS.USER_FORMAT.format(date);
+	}
 	@Override public CrystalTimeMilis next(){
 		return add(1l);
 	}
